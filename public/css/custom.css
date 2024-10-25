@@ -1,0 +1,43 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.tabs {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.tab.active {
+    font-weight: bold;
+    border-bottom: 2px solid #007bff;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.checkbox-group label {
+    margin-right: 10px;
+}
+
+.metrics-results {
+    margin-top: 20px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 5px;
+}
