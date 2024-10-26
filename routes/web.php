@@ -15,3 +15,4 @@ use App\Http\Controllers\MetricController;
 */
 
 Route::get('/', [MetricController::class, 'index'])->name('metrics.index');
+Route::post('/metrics/run', [MetricController::class, 'run'])->name('metrics.run');

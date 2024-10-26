@@ -33,12 +33,12 @@
                 <label for="strategy">Strategy</label>
                 <select id="strategy" name="strategy" class="form-control" required>
                     @foreach($strategies as $strategy)
-                        <option value="{{ $strategy->id }}">{{ $strategy->name }}</option>
+                        <option value="{{ strtolower($strategy->name) }}">{{ $strategy->name }}</option>
                     @endforeach
                 </select>
             </div>
 
-            <button type="button" id="get-metrics" class="btn btn-primary">Get Metrics</button>
+            <button type="submit" id="get-metrics" class="btn btn-primary">Get Metrics</button>
         </form>
 
         <div id="metrics-results" class="metrics-results" style="display:none;">
@@ -48,5 +48,7 @@
         <button type="button" id="save-metric" class="btn btn-success" style="display:none;">Save Metric Run</button>
     </div>
 </div>
-
+@section('scripts')
+<script src="{{ asset('js/metrics.js') }}"></script>
+@endsection
 @endsection
